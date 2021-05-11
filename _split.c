@@ -1,4 +1,4 @@
-#include "fun_aux.h"
+#include "principal.h"
 
 /**
 * _split - splits a string with by a specific char

@@ -1,16 +1,16 @@
-#include "fun_aux.h"
+#include "principal.h"
 
-stack_t *siguiente(const stack_t *loc)
+stack_t *siguiente(stack_t *loc)
 {
 	return (loc->next);
 }
 
-stack_t *anterior(const stack_t *loc)
+stack_t *anterior(stack_t *loc)
 {
 	return (loc->prev);
 }
 
-const stack_t *es_loc_cad(const stack_t *loc)
+stack_t *es_loc_cad(stack_t *loc)
 {
 	if (loc)
 		return (loc);
@@ -41,7 +41,7 @@ int info_dato(stack_t *loc)
 	return (loc->n);
 }
 
-stack_t *crear_nodo(const int n)
+stack_t *crear_nodo(int n)
 {
 	stack_t *nodo = malloc(sizeof(stack_t));
 
@@ -54,7 +54,7 @@ stack_t *crear_nodo(const int n)
 	return (nodo);
 }
 
-stack_t *add_dnodeint(stack_t **head, const int n)
+stack_t *add_dnodeint(stack_t **head, int n)
 {
 	stack_t *nuevo_nodo = NULL;
 
@@ -101,9 +101,32 @@ void swap_nodes(stack_t *loc1, stack_t *loc2)
 	loc1->prev = holder2;
 }
 
-size_t largo_cadena(const stack_t *h)
+size_t largo_cadena(stack_t *h)
 {
 	if (es_loc_cad(h))
 		return (largo_cadena(siguiente(h)) + 1);
 	return (0);
+}
+
+
+stack_t *add_dnodeint_end(stack_t **head, const int n)
+{
+	stack_t *nuevo_nodo = NULL;
+	stack_t *aux = *head;
+
+	if (!head)
+		return (NULL);
+
+	nuevo_nodo = crear_nodo(n);
+	if (!nuevo_nodo)
+		return (NULL);
+	if (!*head)
+	{
+		*head = nuevo_nodo;
+		return (nuevo_nodo);
+	}
+	while (siguiente(aux))
+		aux = siguiente(aux);
+	insertar_despues(nuevo_nodo, aux);
+	return (nuevo_nodo);
 }

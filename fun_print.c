@@ -1,4 +1,4 @@
-#include "fun_aux.h"
+#include "principal.h"
 
 /**
  * print_dlistint - writes the character c to stdout
@@ -8,7 +8,7 @@
  * On error, -1 is returned, and errno is set appropriately.
  */
 
-size_t print_dlistint(const stack_t *h)
+size_t print_dlistint(stack_t *h)
 {
 	if (es_loc_cad(h))
 	{
@@ -91,18 +91,9 @@ int print_number(int n)
 }
 
 
-void imprimir_nodo(const stack_t *loc)
+void imprimir_nodo(stack_t *loc)
 {
 	print_number(info_dato(loc));
-}
-
-size_t print_dlistint(const stack_t *h)
-{
-	if (es_loc_cad(h))
-	{
-		imprimir_nodo(h);
-		return (print_dlistint(siguiente(h)) + 1);
-	}
-	return (0);
+	_putchar('\n', 1);
 }
 
