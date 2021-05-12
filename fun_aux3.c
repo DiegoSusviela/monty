@@ -99,12 +99,15 @@ stack_t *add_dnodeint_end(stack_t **head, const int n)
 
 int check_int(char *str)
 {
-	int i;
+	int i = 0;
 
 	if (str[0] == '\0')
 		return (0);
 
-	for (i = 0; str[i] != '\0'; i++)
+	if (str[0] == '-')
+		i = 1;
+
+	for (; str[i] != '\0'; i++)
 	{
 		if (str[i] < 48 || str[i] > 57)
 			return (0);
