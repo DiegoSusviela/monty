@@ -12,8 +12,6 @@ globant globalvar;
 int find_instruction(char **av)
 {
 	int i = 0;
-
-	globalvar.av = av;
 	instruction_t instructions[] = {{"push", push}, {"sub", sub}, {"pstr", pstr},
 					{"div", divi}, {"mul", mul}, {"pall", pall},
 					{"pint", pint}, {"nop", nop}, {"pchar", pchar},
@@ -21,6 +19,8 @@ int find_instruction(char **av)
 					{"add", add}, {"rotl", rotl},
 					{"rotr", rotr}, {"stack", stack}, {"queue", queue},
 					{NULL, NULL}};
+
+    globalvar.av = av;
 	while (instructions[i].opcode)
 	{
 		if (_strcmp(instructions[i].opcode, av[0]) == 0)
