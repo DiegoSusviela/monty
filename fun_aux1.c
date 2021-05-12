@@ -130,3 +130,19 @@ stack_t *add_dnodeint_end(stack_t **head, const int n)
 	insertar_despues(nuevo_nodo, aux);
 	return (nuevo_nodo);
 }
+
+int check_int(char *str)
+{
+	int i;
+
+	if (str[0] == '\0')
+		return (0);
+
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		if (str[i] < 48 || str[i] > 57)
+			return (0);
+	}
+
+	return (1);
+}

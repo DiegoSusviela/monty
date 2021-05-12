@@ -40,6 +40,8 @@ typedef struct global_var
         char **av;
         int ln;
         stack_t *head;
+        int format;
+        int end;
 } globant;
 extern globant globalvar;
 

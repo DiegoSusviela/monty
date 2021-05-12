@@ -21,6 +21,7 @@ stack_t *remover_de_cadenna(stack_t *loc);
 void swap_nodes(stack_t *loc1, stack_t *loc2);
 size_t largo_cadena(stack_t *h);
 stack_t *add_dnodeint_end(stack_t **head, const int n);
+int check_int(char *str);
 
 /* fun_aux2 */
 int _strlen(char *buff);
