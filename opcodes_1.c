@@ -69,7 +69,7 @@ void pint(stack_t **head, unsigned int line_number)
 
 void pop(stack_t **head, unsigned int line_number)
 {
-	stack_t *loc = siguiente(globalvar.head);
+	stack_t *loc;
 
 	(void)head;
 
@@ -79,6 +79,7 @@ void pop(stack_t **head, unsigned int line_number)
 		globalvar.end = 1;
 		return;
 	}
+	loc = siguiente(globalvar.head);
 	liberar_nodo(remover_de_cadenna(globalvar.head));
 	globalvar.head = loc;
 }
