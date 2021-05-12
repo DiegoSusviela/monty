@@ -1,4 +1,4 @@
-#include "principal.h"
+#include "monty.h"
 
 stack_t *siguiente(stack_t *loc)
 {

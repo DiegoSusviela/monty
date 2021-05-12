@@ -1,4 +1,4 @@
-#include "principal.h"
+#include "monty.h"
 
 /**
 * _strlen - counts the length of a string

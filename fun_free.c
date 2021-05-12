@@ -1,4 +1,4 @@
-#include "principal.h"
+#include "monty.h"
 
 void liberar_nodo(stack_t *a_liberar)
 {

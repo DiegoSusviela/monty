@@ -17,5 +17,4 @@
 int _getline(char **fill, int *n, int where_read);
 char *add_aux_to_fill(char *fill, char *aux, int aux_size);
 
-
 #endif /* PRINCIPAL_H */
