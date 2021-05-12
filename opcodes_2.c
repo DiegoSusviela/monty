@@ -16,12 +16,11 @@ void pstr(stack_t **head, unsigned int line_number)
 
 	for (; aux && info_dato(aux) != 0;)
 	{
-		if (info_dato(aux) >= 0 && info_dato(aux) <= 127)
-			_putchar(info_dato(aux), 1);
-
+		if (isascii(info_dato(aux)))
+			printf("%c", info_dato(aux));
 		aux = siguiente(aux);
 	}
-	_putchar('\n', 1);
+	printf("\n");
 }
 
 /**
