@@ -69,8 +69,9 @@ void pint(stack_t **head, unsigned int line_number)
 
 void pop(stack_t **head, unsigned int line_number)
 {
-	(void)head;
 	stack_t *loc = siguiente(globalvar.head);
+
+	(void)head;
 
 	if (!globalvar.head)
 	{
@@ -93,6 +94,7 @@ void pop(stack_t **head, unsigned int line_number)
 void swap(stack_t **head, unsigned int line_number)
 {
 	stack_t *loc;
+
 	(void)head;
 
 	if (!globalvar.head || !siguiente(globalvar.head))

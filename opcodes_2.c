@@ -11,6 +11,7 @@
 void pstr(stack_t **head, unsigned int line_number)
 {
 	stack_t *aux = *head;
+
 	(void)line_number;
 
 	for (; aux && info_dato(aux) != 0;)
@@ -34,6 +35,7 @@ void pstr(stack_t **head, unsigned int line_number)
 void rotl(stack_t **head, unsigned int line_number)
 {
 	stack_t *loc = globalvar.head;
+
 	(void)line_number;
 
 	if (!(*head && siguiente(*head)))
@@ -55,6 +57,7 @@ void rotl(stack_t **head, unsigned int line_number)
 void rotr(stack_t **head, unsigned int line_number)
 {
 	stack_t *aux = *head;
+
 	(void)line_number;
 
 	for (; aux;)
