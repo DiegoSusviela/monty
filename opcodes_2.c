@@ -35,8 +35,8 @@ void pstr(stack_t **head, unsigned int line_number)
 		}
 		aux = siguiente(aux);
 	}*/
-	fflush(0);
 	printf("\n");
+	fflush(0);
 }
 
 /**
