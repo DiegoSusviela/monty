@@ -68,7 +68,7 @@ int main(int ac, char **av)
 
 	globalvar.av = NULL, globalvar.ln = 0, globalvar.head = NULL;
 	globalvar.format = 0, globalvar.end = 0;
-	if (ac <= 1)
+	if (ac != 2)
 		_puts2("USAGE: monty file\n"), exit(EXIT_FAILURE);
 	fd = open(av[1], O_RDONLY);
 	if (fd == -1)
