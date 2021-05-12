@@ -16,7 +16,7 @@ void pstr(stack_t **head, unsigned int line_number)
 
 	for (; aux && info_dato(aux) != 0;)
 	{
-		if (info_dato(aux) >= 0 && info_dato(aux) <= 126)
+		if (info_dato(aux) >= 0 && info_dato(aux) <= 127)
 			_putchar(info_dato(aux), 1);
 
 		aux = siguiente(aux);
