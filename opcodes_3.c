@@ -13,7 +13,7 @@ void sub(stack_t **head, unsigned int line_number)
 {
 	if (!globalvar.head || !siguiente(globalvar.head))
 	{
-		fprintf(stderr, "L %i: can't sub, stack too short\n", line_number);
+		fprintf(stderr, "L%i: can't sub, stack too short\n", line_number);
 		globalvar.end = 1;
 		return;
 	}
@@ -36,14 +36,14 @@ void divi(stack_t **head, unsigned int line_number)
 	(void)head;
 	if (!globalvar.head || !siguiente(globalvar.head))
 	{
-		fprintf(stderr, "L %i: can't div, stack too short\n", line_number);
+		fprintf(stderr, "L%i: can't div, stack too short\n", line_number);
 		globalvar.end = 1;
 		return;
 	}
 
 	if (globalvar.head->n == 0)
 	{
-		fprintf(stderr, "L %i: division by zero\n", line_number);
+		fprintf(stderr, "L%i: division by zero\n", line_number);
 		globalvar.end = 1;
 		return;
 	}
@@ -65,7 +65,7 @@ void mul(stack_t **head, unsigned int line_number)
 	(void)head;
 	if (!globalvar.head || !siguiente(globalvar.head))
 	{
-		fprintf(stderr, "L %i: can't mul, stack too short\n", line_number);
+		fprintf(stderr, "L%i: can't mul, stack too short\n", line_number);
 		globalvar.end = 1;
 		return;
 	}
@@ -86,14 +86,14 @@ void mod(stack_t **head, unsigned int line_number)
 	(void)head;
 	if (!globalvar.head || !siguiente(globalvar.head))
 	{
-		fprintf(stderr, "L %i: can't mod, stack too short\n", line_number);
+		fprintf(stderr, "L%i: can't mod, stack too short\n", line_number);
 		globalvar.end = 1;
 		return;
 	}
 
 	if (globalvar.head->n == 0)
 	{
-		fprintf(stderr, "L %i: division by zero\n", line_number);
+		fprintf(stderr, "L%i: division by zero\n", line_number);
 		globalvar.end = 1;
 		return;
 	}

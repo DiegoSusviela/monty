@@ -13,7 +13,7 @@ void push(stack_t **head, unsigned int line_number)
 	(void)head;
 	if (!globalvar.av[1] || !check_int(globalvar.av[1]))
 	{
-		fprintf(stderr, "L %i: usage: push integer\n", line_number);
+		fprintf(stderr, "L%i: usage: push integer\n", line_number);
 		globalvar.end = 1;
 		return;
 	}
@@ -52,7 +52,7 @@ void pint(stack_t **head, unsigned int line_number)
 	(void)head;
 	if (!globalvar.head)
 	{
-		fprintf(stderr, "L %i: can't pint, stack empty\n", line_number);
+		fprintf(stderr, "L%i: can't pint, stack empty\n", line_number);
 		globalvar.end = 1;
 		return;
 	}
@@ -75,7 +75,7 @@ void pop(stack_t **head, unsigned int line_number)
 
 	if (!globalvar.head)
 	{
-		fprintf(stderr, "L %i: can't pop an empty stack\n", line_number);
+		fprintf(stderr, "L%i: can't pop an empty stack\n", line_number);
 		globalvar.end = 1;
 		return;
 	}
@@ -99,7 +99,7 @@ void swap(stack_t **head, unsigned int line_number)
 
 	if (!globalvar.head || !siguiente(globalvar.head))
 	{
-		fprintf(stderr, "L %i: can't swap, stack too short\n", line_number);
+		fprintf(stderr, "L%i: can't swap, stack too short\n", line_number);
 		globalvar.end = 1;
 		return;
 	}

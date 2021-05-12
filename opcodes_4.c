@@ -12,7 +12,7 @@ void add(stack_t **head, unsigned int line_number)
 {
 	if (!globalvar.head || !siguiente(globalvar.head))
 	{
-		fprintf(stderr, "L %i: can't add, stack too short\n", line_number);
+		fprintf(stderr, "L%i: can't add, stack too short\n", line_number);
 		globalvar.end = 1;
 		return;
 	}

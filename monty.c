@@ -32,7 +32,7 @@ int find_instruction(char **av)
 	}
 	if (!instructions[i].opcode)
 	{
-		fprintf(stderr, "L %i: unknown instruction %s\n", globalvar.ln, av[0]);
+		fprintf(stderr, "L%i: unknown instruction %s\n", globalvar.ln, av[0]);
 		exit(EXIT_FAILURE);
 	}
 	return (0);
