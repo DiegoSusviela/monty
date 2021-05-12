@@ -119,7 +119,7 @@ void pchar(stack_t **head, unsigned int line_number)
 		globalvar.end = 1;
 		return;
 	}
-	if (info_dato(globalvar.head) >= 0 && info_dato(globalvar.head) <= 127)
+	if (isascii(info_dato(globalvar.head)))
 		printf("%c\n", info_dato(globalvar.head));
 	else
 	{
