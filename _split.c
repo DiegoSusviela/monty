@@ -7,6 +7,7 @@
 * ----------------------------------
 * Return: a pointer to a pointer with the splitted str
 */
+
 char **_split(char *s, char *c)
 {
 	int line_i, i = 0, j;
@@ -56,6 +57,7 @@ char **_split(char *s, char *c)
 * -----------------------------------------
 * Return: the number of times that character has been found
 */
+
 int calc_lines(char *s, char *c)
 {
 	int i;
@@ -80,6 +82,7 @@ int calc_lines(char *s, char *c)
  * -----------------------------------------------------------
  * Return: 1 if the string has commas, 0 if not
 */
+
 int check_split_line(char *s, int i, char *c, int *bool_comm, int *type_comm)
 {
 	int j;
@@ -113,6 +116,7 @@ int check_split_line(char *s, int i, char *c, int *bool_comm, int *type_comm)
 * @splitted: the splitted string
 * ---------------------------------------
 */
+
 void free_split(char **splitted)
 {
 	int i;
@@ -139,6 +143,7 @@ void free_split(char **splitted)
  * @tComms: type of commas
  *
 */
+
 void comms_pross(char *s, int *bool, int *i, int *nxComms, int *tComms)
 {
 	int j;

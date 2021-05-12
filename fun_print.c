@@ -21,11 +21,12 @@ size_t print_dlistint(stack_t *h)
 /**
  * _putchar - writes the character c to stdout
  * @c: The character to print
+ * @fd: The character to print
  *
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
- 
+
 int _putchar(char c, int fd)
 {
 	return (write(fd, &c, 1));
@@ -70,6 +71,14 @@ void _puts(char *str)
 	}
 }
 
+/**
+ * print_number - Entry point
+ * @n: string top print
+ *
+ * Description: prints a string
+ * Return: Always 0 (Success)
+ */
+
 int print_number(int n)
 {
 	int largo = 0;
@@ -89,11 +98,3 @@ int print_number(int n)
 	largo++;
 	return (largo);
 }
-
-
-void imprimir_nodo(stack_t *loc)
-{
-	print_number(info_dato(loc));
-	_putchar('\n', 1);
-}
-

@@ -8,6 +8,7 @@
 * ----------------------------------------
 * Return: -1 if fails, the readed bytes
 */
+
 int _getline(char **fill, int *n, int where_read)
 {
 	char *aux = NULL;

@@ -1,9 +1,23 @@
 #include "monty.h"
 
+/**
+* liberar_nodo - counts the length of a string
+* @a_liberar: the buffer pointer
+* ---------------------------------
+* Return: the length of the string
+*/
+
 void liberar_nodo(stack_t *a_liberar)
 {
 	free(a_liberar);
 }
+
+/**
+* free_dlistint - counts the length of a string
+* @head: the buffer pointer
+* ---------------------------------
+* Return: the length of the string
+*/
 
 void free_dlistint(stack_t *head)
 {
@@ -15,6 +29,14 @@ void free_dlistint(stack_t *head)
 	liberar_nodo(head);
 	free_dlistint(loc);
 }
+
+/**
+* delete_dnodeint_at_index - counts the length of a string
+* @head: the buffer pointer
+* @index: the buffer pointer
+* ---------------------------------
+* Return: the length of the string
+*/
 
 int delete_dnodeint_at_index(stack_t **head, unsigned int index)
 {
@@ -46,4 +68,17 @@ int delete_dnodeint_at_index(stack_t **head, unsigned int index)
 		return (1);
 	}
 	return (-1);
+}
+
+/**
+* imprimir_nodo - counts the length of a string
+* @loc: the buffer pointer
+* ---------------------------------
+* Return: the length of the string
+*/
+
+void imprimir_nodo(stack_t *loc)
+{
+	print_number(info_dato(loc));
+	_putchar('\n', 1);
 }
