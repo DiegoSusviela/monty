@@ -67,10 +67,10 @@ void rotr(stack_t **head, unsigned int line_number)
 		{
 			add_dnodeint(head, remover_de_cadenna(aux)->n);
 			liberar_nodo(aux);
+			*head = anterior(*head);		
 		}
 		aux = siguiente(aux);
 	}
-	*head = anterior(*head);
 }
 
 /**
