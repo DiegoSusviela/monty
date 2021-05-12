@@ -20,7 +20,7 @@ int find_instruction(char **av)
 					{"rotr", rotr}, {"stack", stack}, {"queue", queue},
 					{NULL, NULL}};
 
-    globalvar.av = av;
+	globalvar.av = av;
 	while (instructions[i].opcode)
 	{
 		if (_strcmp(instructions[i].opcode, av[0]) == 0)
@@ -88,7 +88,7 @@ int main(int ac, char **av)
 			printf("Es null\n"), free_split(lines),	free(new_line);
 			exit(EXIT_FAILURE);
 		}
-		if (lines[i][0] == '#')
+		if (new_line[0] == '#' || new_line[0] == '\0')
 		{
 			free(new_line);
 			continue;
