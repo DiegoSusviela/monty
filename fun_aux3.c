@@ -104,7 +104,7 @@ int check_int(char *str)
 	if (str[0] == '\0')
 		return (0);
 
-	if (str[0] == '-')
+	if (str[0] == '-' && (str[1] >= 48 && str[1] <= 57))
 		i = 1;
 
 	for (; str[i] != '\0'; i++)
