@@ -126,4 +126,5 @@ void pchar(stack_t **head, unsigned int line_number)
 		globalvar.end = 1;
 		return;
 	}
+	fflush(0);
 }
