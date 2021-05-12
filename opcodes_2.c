@@ -20,10 +20,7 @@ void pstr(stack_t **head, unsigned int line_number)
 			break;
 		printf("%c", info_dato(aux));
 		aux = siguiente(aux);
-		if (aux == *head)
-			break;
 	}
-
 	printf("\n");
 	fflush(0);
 }
@@ -71,9 +68,9 @@ void rotr(stack_t **head, unsigned int line_number)
 			add_dnodeint(head, remover_de_cadenna(aux)->n);
 			liberar_nodo(aux);
 		}
-
 		aux = siguiente(aux);
 	}
+	*head = anterior(*head);
 }
 
 /**
