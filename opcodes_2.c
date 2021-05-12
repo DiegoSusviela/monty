@@ -14,12 +14,24 @@ void pstr(stack_t **head, unsigned int line_number)
 
 	(void)line_number;
 
+	while (aux)
+	{
+		if (!isascii(info_dato(aux)) || info_dato(aux) == 0)
+			break;
+		printf("%c", info_dato(aux));
+		aux = siguiente(aux);
+		if (aux == *head)
+			break;
+	}
+/*
 	for (; aux && info_dato(aux) != 0;)
 	{
 		if (isascii(info_dato(aux)))
 			printf("%c", info_dato(aux));
+		else
+			return;
 		aux = siguiente(aux);
-	}
+	}*/
 	printf("\n");
 }
 
