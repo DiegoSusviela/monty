@@ -119,11 +119,8 @@ void pchar(stack_t **head, unsigned int line_number)
 		globalvar.end = 1;
 		return;
 	}
-	if (info_dato(globalvar.head) >= 0 && info_dato(globalvar.head) <= 126)
-	{
-		_putchar(info_dato(globalvar.head), 1);
-		printf("\n");
-	}
+	if (info_dato(globalvar.head) >= 0 && info_dato(globalvar.head) <= 127)
+		printf("%c\n", info_dato(globalvar.head));
 	else
 	{
 		fprintf(stderr, "L%u: can't pchar, value out of range\n", line_number);
