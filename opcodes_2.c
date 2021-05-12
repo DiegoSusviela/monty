@@ -61,13 +61,15 @@ void rotr(stack_t **head, unsigned int line_number)
 
 	(void)line_number;
 
+	if (aux && !siguiente(aux))
+		return;
+
 	for (; aux;)
 	{
 		if (!siguiente(aux))
 		{
 			add_dnodeint(head, remover_de_cadenna(aux)->n);
-			liberar_nodo(aux);
-			*head = anterior(*head);		
+			liberar_nodo(aux);		
 		}
 		aux = siguiente(aux);
 	}
