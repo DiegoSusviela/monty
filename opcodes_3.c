@@ -112,15 +112,14 @@ void mod(stack_t **head, unsigned int line_number)
 
 void pchar(stack_t **head, unsigned int line_number)
 {
-	(void)head;
-	if (!globalvar.head)
+	if (!*head)
 	{
 		fprintf(stderr, "L%u: can't pchar, stack empty\n", line_number);
 		globalvar.end = 1;
 		return;
 	}
-	if (isascii(info_dato(globalvar.head)))
-		printf("%c\n", info_dato(globalvar.head));
+	if (isascii(info_dato(*head)))
+		printf("%c\n", info_dato(*head));
 	else
 	{
 		fprintf(stderr, "L%u: can't pchar, value out of range\n", line_number);
